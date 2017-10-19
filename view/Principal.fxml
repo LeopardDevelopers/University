@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.Principal">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <VBox spacing="10.0" BorderPane.alignment="BOTTOM_CENTER">
+                    <children>
+                  <HBox maxWidth="1.7976931348623157E308" spacing="10.0">
+                     <children>
+                                <ComboBox fx:id="tablecmb" maxWidth="1.7976931348623157E308" minWidth="150.0" onAction="#doTablecmb" prefWidth="150.0" />
+                                <TextField fx:id="searchtxt" maxWidth="1.7976931348623157E308" minWidth="22.0" prefHeight="26.0" prefWidth="1920.0" />
+                                <Button fx:id="search" contentDisplay="TOP" maxWidth="80.0" minWidth="80.0" mnemonicParsing="false" onAction="#doSearch" prefWidth="80.0" text="Search" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="Calibri" size="14.0" />
+                                    </font>
+                                </Button>
+                     </children>
+                  </HBox>
+                        <ScrollPane prefHeight="1080.0" prefWidth="1920.0">
+                            <content>
+                                <AnchorPane fx:id="table" minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0" />
+                            </content>
+                        </ScrollPane>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets left="10.0" />
+                    </BorderPane.margin>
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                </VBox>
+            </center>
+            <right>
+                <VBox prefHeight="331.0" prefWidth="90.0" spacing="10.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="New" mnemonicParsing="false" onAction="#doNew" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #009EE0;" text="New" textAlignment="CENTER">
+                            <font>
+                                <Font name="Calibri" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="remove" mnemonicParsing="false" onAction="#doRemove" prefHeight="26.0" prefWidth="80.0" text="Remove" textAlignment="CENTER">
+                            <font>
+                                <Font name="Calibri" size="14.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="edit" mnemonicParsing="false" onAction="#doEdit" prefHeight="26.0" prefWidth="80.0" text="Edit" textAlignment="CENTER">
+                            <font>
+                                <Font name="Calibri" size="14.0" />
+                            </font>
+                        </Button>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets left="10.0" />
+                    </BorderPane.margin>
+                </VBox>
+            </right>
+            <top>
+                <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                        <MenuItem mnemonicParsing="false" onAction="#doNewSave" text="New" />
+                        <MenuItem mnemonicParsing="false" onAction="#doOpen" text="Open" />
+                        <MenuItem mnemonicParsing="false" onAction="#doSave" text="Save" />
+                        <MenuItem mnemonicParsing="false" onAction="#doSaveAs" text="Save as..." />
+                                <MenuItem fx:id="logof" mnemonicParsing="false" text="Logof" />
+                                <MenuItem fx:id="close" mnemonicParsing="false" onAction="#doExit" text="Exit" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Edit">
+                            <items>
+                                <MenuItem fx:id="newm" mnemonicParsing="false" onAction="#doNew" text="New" />
+                                <MenuItem fx:id="deletem" mnemonicParsing="false" onAction="#doRemove" text="Remove" />
+                                <MenuItem fx:id="viewm" mnemonicParsing="false" onAction="#doEdit" text="Edit" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                    <BorderPane.margin>
+                        <Insets bottom="10.0" />
+                    </BorderPane.margin>
+                </MenuBar>
+            </top>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </BorderPane>
+    </children>
+</AnchorPane>
